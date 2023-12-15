@@ -7,4 +7,4 @@ About, Projet : @AspicConx
 
 Transition Numérique et Ecologique, Histoire, Contact : @Lukas-Faure
 
-test Nos Partenaire : @NokeOrgrim
+Nos Partenaire : @NokeOrgrim
