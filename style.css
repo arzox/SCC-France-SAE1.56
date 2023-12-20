@@ -1,0 +1,22 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+figure{
+    align-self: center;
+    padding: 0;
+    margin: 0;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid red;
+    justify-content: center;
+    margin: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
