@@ -23,10 +23,8 @@
                     <input type="text" name="Prénom" placeholder="Nom" required>
                 </p>
                 <h2>Informations de contact</h2>
-                <p>
-                    <input type="text" name="Adresse-Mail" placeholder="Adresse mail" required><br />
-                    <input type="text" name="Numéro" placeholder="Numéro" required>
-                </p>
+                <input type="text" name="Adresse-Mail" placeholder="Adresse mail" required><br />
+                <input type="text" name="Numéro" placeholder="Numéro" required>
                 <h2>Adresse</h2>
                 <p>
                     <input type="text" name="Adresse" placeholder="Adresse" required><br />
@@ -34,18 +32,35 @@
                     <input type="text" name="Ville" placeholder="Ville" required>
                 </p>
                 <p>
-                    <input type="radio" name="Stage" value="Stage"> Stage
-                    <input type="radio" name="Emplois" value="Emplois"> Emplois
-                    <input type="radio" name="Question" value="Question"> Question
-                    <input type="radio" name="Autre" value="Autre" checked> Autre
+                    <label> 
+                        <input type="radio" name="choix" value="Stage">
+                        Stage
+                    </label>
+
+                    <label> 
+                        <input type="radio" name="choix" value="Emplois">
+                        Emplois
+                    </label>
+
+                    <label> 
+                        <input type="radio" name="choix" value="Question">
+                        Question
+                    </label>
+
+                    <label> 
+                        <input type="radio" name="choix" value="Autre" checked>
+                        Autre
+                    </label>
                 </p>
                 
-    
-                <p>
-                    <textarea name="description">
-                        Text...
-                    </textarea>
-                </p>
+                <textarea
+                name="textarea"
+                rows="5"
+                cols="30"
+                placeholder="Text..."></textarea>
+
+
+
                 <p><input type="submit" value="Envoyer"></p> 
             </form>
         </main>
