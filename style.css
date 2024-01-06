@@ -64,9 +64,9 @@ header li {
     transform: scaleX(1);
     transform-origin: bottom center;
 }
-  
 
 
+/* PAGE CONTACT */
 main{
     display: flex;
     flex-direction: column;
@@ -129,7 +129,6 @@ section > input:focus::before {
 }
 
 
-section input[type="text"]::placeholder,
 form > input[type="text"]::placeholder,
 form input[type="email"]::placeholder,
 form input[type="tel"]::placeholder,
@@ -138,7 +137,6 @@ textarea::placeholder {
     transition: color 0.2s linear;
 }
 
-section input[type="text"]:focus::placeholder, 
 form input[type="text"]:focus::placeholder,
 form input[type="email"]:focus::placeholder,
 form input[type="tel"]:focus::placeholder,
