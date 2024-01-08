@@ -12,27 +12,40 @@
             </nav>
         </header>
         
-        <main>
+        <main class="main-contact">
             <h1>Nous contacter</h1>
             <figure>
                 <img src="../assets/contact/icon-user.png" alt="icon-user">
             </figure>
-            <form method="get" action="">
-                <h2>Nom complet</h2>
-                <section>
-                    <input type="text" name="Prénom" placeholder="Prénom" required>
+            <form method="get" action="" class="container-flex">
 
-                    <input type="text" name="Nom" placeholder="Nom" required>
-                </section>
-                <h2>Informations de contact</h2>
-                <input type="email" name="Adresse-Mail" placeholder="Adresse mail" required>
-                <input type="tel" name="Numéro" placeholder="Numéro" required>
-                <h2>Adresse</h2>
-                <input type="text" name="Adresse" placeholder="Adresse" required />
-                <section>
-                    <input type="text" name="Code-Postal" placeholder="Code Postal" required>
-                    <input type="text" name="Ville" placeholder="Ville" required>
-                </section>
+                <div>
+                    <h2>Nom complet</h2>
+                    <section>
+                        <input type="text" name="Prénom" placeholder="Prénom" required>
+                        <input type="text" name="Nom" placeholder="Nom" required>
+                    </section>
+                </div>
+                 
+                <div>
+                    <h2>Informations de contact</h2>
+                    <section>
+                        <input type="email" name="Adresse-Mail" placeholder="Adresse mail" required>
+                        <input type="tel" name="Numéro" placeholder="Numéro" required>
+                    </section>
+                </div>
+
+                <div>
+                    <h2>Adresse</h2>
+                    <section>
+                        <input type="text" name="Adresse" placeholder="Adresse" required />
+                    </section>
+                    <section>
+                        <input type="text" name="Code-Postal" placeholder="Code Postal" required>
+                        <input type="text" name="Ville" placeholder="Ville" required>
+                    </section>
+                </div>
+                
                 <section>
                     <label>
                         <input type="radio" name="choix" value="Stage">

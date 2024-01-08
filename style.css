@@ -67,123 +67,77 @@ header li {
 
 
 /* PAGE CONTACT */
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.main-contact {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
 
-h1 {
-    align-self: center;
-    margin: 1em;
-}
-
-figure{
-    align-self: center;
-    padding: 0;
-    margin: 1em;
-}
-
-form{
-    align-self: center;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-form > input {
-    align-self: center;
-    width: 52%;
-    padding: 0;
-    margin: 0;
-    height: 35px;
-}
-
-input {
-    border: none;
-    border-bottom: 2px solid black;
-    transition: border-bottom 0.5s linear;
-    position: relative;
-}
-
-section > input:focus, form > input:focus {
-    outline: none;
-    border-bottom: 2px solid #0297FA;
-    margin: 1em;
-}
-
-section > input::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 2px;
-    background-color: #0297FA;
-    transition: width 5s ease;
-}
-
-section > input:focus::before {
-    width: 100%;
-}
-
-
-form > input[type="text"]::placeholder,
-form input[type="email"]::placeholder,
-form input[type="tel"]::placeholder,
-textarea::placeholder {
-    color: #666;
-    transition: color 0.2s linear;
-}
-
-form input[type="text"]:focus::placeholder,
-form input[type="email"]:focus::placeholder,
-form input[type="tel"]:focus::placeholder,
-textarea:focus::placeholder {
-    color: #0297FA;
-}
-
-section >input:focus::before {
-  width: 100%;
-}
-
-
-form > textarea {
-    align-self: center;
-    width: 50%;
-    resize: vertical;
-    border: 2px solid #666;
-    transition: border-color 0.3s, width 0.3s;
-}
-
-form > textarea:focus {
-    outline: none;
-    border-color: #0297FA;
-    width: 52%;
-}
-
-form h2, form section {
+h1, form, figure {
     text-align: center;
 }
 
-form h2{
-    padding: 0;
-    margin: 0;
-    margin-top: 10px;
+h2 {
+    margin: 15px;
 }
 
-form section {
+form{
     display: flex;
+    flex-direction: column;
     gap: 1em;
-    justify-content: center;
 }
 
-form > section > input {
-    width: 25%;
-    padding: 0;
-    margin: 0;
+form div > section {
+    display: flex;
+    width: 100%;
+    gap: 1em;
+}
+
+form div > section > input {
+    flex: 1;
+}
+
+section {
+    margin-bottom: 1em;
+}
+
+input {
     height: 35px;
+    border: none;
+    border-bottom: 2px solid black;
+    transition: border-bottom 0.5s linear, padding 0.2s ease;
+    position: relative;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid #0297FA;
+    padding: 10px;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder,
+input[type="tel"]::placeholder, textarea::placeholder {
+    color: black;
+    transition: color 0.5s linear;
+}
+
+input[type="text"]:focus::placeholder, input[type="email"]:focus::placeholder,
+input[type="tel"]:focus::placeholder, textarea:focus::placeholder {
+    color: #0297FA;
+}
+
+textarea {
+    resize: vertical;
+    border-radius: 1em;
+    border: 2px solid #666;
+    transition: border-color 0.5s, border-radius 0.2s, padding 0.2s, width 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-radius: 1.5em;
+    border-color: #0297FA;
+    padding: 10px;
 }
 
 button {
@@ -204,11 +158,3 @@ button:hover {
     border: 2px solid #0297FA;
     box-shadow: 0 0 10px 0 #0297FA;
 }
-
-
-
-
-
-
-
-
