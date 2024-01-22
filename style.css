@@ -240,6 +240,7 @@ button:hover {
 
 .main_about > section {
     width: 80%;
+    height: 10em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,4 +249,12 @@ button:hover {
 .main_about > a {
     text-decoration: none;
     color: var(--black)
+}
+
+/* page projet */
+
+.main_projet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
