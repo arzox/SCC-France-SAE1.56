@@ -1,3 +1,13 @@
+:root {
+    --blue: #0297FA;
+    --black: #1f1e2c;
+}
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
 
 @font-face {
     font-family: dosis;
@@ -15,16 +25,18 @@ a {
 }
 
 header {
-    background-color: #0297FA;
+    background-color: var(--blue);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    height: 3em;
 }
 
 header img {
     position: absolute;
     left: 20px;
+    top: 0;
     height: 100%;
 }
 
@@ -70,7 +82,7 @@ header li {
 .main-contact {
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 30%;
 }
 
 .main-contact h1, form, figure {
@@ -104,26 +116,26 @@ header li {
 .main-contact input {
     height: 35px;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--black);
     transition: border-bottom 0.5s linear, padding 0.2s ease;
     position: relative;
 }
 
 .main-contact input:focus{
     outline: none;
-    border-bottom: 2px solid #0297FA;
+    border-bottom: 2px solid var(--blue);
     padding: 10px;
 }
 
 .main-contact input[type="text"]::placeholder, input[type="email"]::placeholder,
 .main-contact input[type="tel"]::placeholder, textarea::placeholder {
-    color: black;
+    color: var(--black);
     transition: color 0.5s linear;
 }
 
 .main-contact input[type="text"]:focus::placeholder, input[type="email"]:focus::placeholder,
 .main-contact input[type="tel"]:focus::placeholder, textarea:focus::placeholder {
-    color: #0297FA;
+    color: var(--blue);
 }
 
 .main-contact textarea {
@@ -136,7 +148,7 @@ header li {
 .main-contact textarea:focus {
     outline: none;
     border-radius: 1.5em;
-    border-color: #0297FA;
+    border-color: var(--blue);
     padding: 10px;
 }
 
@@ -147,20 +159,17 @@ button {
     padding: 1em;
     padding-left: 3em;
     padding-right: 3em;
-    border: 2px solid #0297FA;
-    background-color: #0297FA;
+    border: 2px solid var(--blue);
+    background-color: var(--blue);
     border-radius: 0.5em;
     transition: background-color 0.5s ease;
 }
 
 button:hover {
     background-color: transparent; 
-    border: 2px solid #0297FA;
-    box-shadow: 0 0 10px 0 #0297FA;
+    border: 2px solid var(--blue);
+    box-shadow: 0 0 10px 0 var(--blue);
 }
-
-
-
 
 
 /* PAGE Histoire */
@@ -237,9 +246,157 @@ button:hover {
     align-items: center;
 }
 
+
 .main_about > section {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+  
+/*Organigramme*/
+#organigramme_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+    gap: 3em;
+}
+
+#organigramme {
+    text-align: center;
+    width: 60%;
+}
+
+#organigramme_text {
+    width: 40%;
+}
+
+.rectangle {
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+ol {
+    list-style: none;
+}
+ 
+
+/* LEVEL-0 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-0 {
+    width: 50%;
+    margin: 0 auto 20px;
+    background: var(--blue);
+  }
+  
+  .level-0::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+  }
+  
+
+
+/* LEVEL-1 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-1 {
+    width: 50%;
+    margin: 0 auto 40px;
+    background: var(--blue);
+  }
+  
+  .level-1::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+  }
+  
+  
+  /* LEVEL-2 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-2-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .level-2-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: calc(25% - 5px);
+    width: calc(50% + 10px);
+    height: 2px;
+    background: var(--black);
+  }
+  
+  .level-2-wrapper > li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+  }
+  
+  .level-2 {
+    margin-bottom: 20px;
+    background: var(--level-2);
+  }
+  
+  
+/* LEVEL-3 STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .level-3-wrapper {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+  }
+  
+  .level-3-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background: var(--black);
+  }
+  
+  .level-3-wrapper li + li {
+    margin-top: 20px;
+  }
+  
+  .level-3 {
+    font-weight: normal;
+    background: var(--level-3);
+  }
+  
+  .level-3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-100%, -50%);
+    width: 20px;
+    height: 2px;
+    background: var(--black);
+  }
