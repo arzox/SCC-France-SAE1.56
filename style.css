@@ -85,35 +85,35 @@ header li {
     width: 30%;
 }
 
-h1, form, figure {
+.main-contact h1, form, figure {
     text-align: center;
 }
 
-h2 {
+.main-contact h2 {
     margin: 15px;
 }
 
-form{
+.main-contact form{
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 
-form div > section {
+.main-contact form div > section {
     display: flex;
     width: 100%;
     gap: 1em;
 }
 
-form div > section > input {
+.main-contact form div > section > input {
     flex: 1;
 }
 
-section {
+.main-contact section {
     margin-bottom: 1em;
 }
 
-input {
+.main-contact input {
     height: 35px;
     border: none;
     border-bottom: 2px solid var(--black);
@@ -121,31 +121,31 @@ input {
     position: relative;
 }
 
-input:focus{
+.main-contact input:focus{
     outline: none;
     border-bottom: 2px solid var(--blue);
     padding: 10px;
 }
 
-input[type="text"]::placeholder, input[type="email"]::placeholder,
-input[type="tel"]::placeholder, textarea::placeholder {
+.main-contact input[type="text"]::placeholder, input[type="email"]::placeholder,
+.main-contact input[type="tel"]::placeholder, textarea::placeholder {
     color: var(--black);
     transition: color 0.5s linear;
 }
 
-input[type="text"]:focus::placeholder, input[type="email"]:focus::placeholder,
-input[type="tel"]:focus::placeholder, textarea:focus::placeholder {
+.main-contact input[type="text"]:focus::placeholder, input[type="email"]:focus::placeholder,
+.main-contact input[type="tel"]:focus::placeholder, textarea:focus::placeholder {
     color: var(--blue);
 }
 
-textarea {
+.main-contact textarea {
     resize: vertical;
     border-radius: 1em;
     border: 2px solid #666;
     transition: border-color 0.5s, border-radius 0.2s, padding 0.2s, width 0.3s;
 }
 
-textarea:focus {
+.main-contact textarea:focus {
     outline: none;
     border-radius: 1.5em;
     border-color: var(--blue);
@@ -178,54 +178,83 @@ button:hover {
     flex-direction: column;
 }
 
-section {
-    width: 80%;
-    height: 30em;
+.main_histoire h1{
+    align-self: center;
+}
+
+.main_histoire section {
+    width: 100%;
+    height: 35em;
     align-self: center;
     display: flex;
     flex-direction: column;
-}
-
-section > img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20%;
-}
-
-
-/*Horloge PAGE HISTOIRE*/
-.horloge {
-    margin: 1em;
-    align-self: center;
-    width: 10%;
-}
-
-.horloge > a {
     position: relative;
-    display: inline-block;
-    overflow: hidden;
 }
 
-.horloge a > img {
-    width: 100%;
-    border-radius: 50%;
-    transition: transform 0.5s ease;
-}
-
-.horloge > a:active:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.main_histoire section > img {
     width: 100%;
     height: 100%;
-    z-index: 1;
 }
 
-.horloge > a:active > img, .horloge > a:hover > img {
-    transform: rotate(360deg);
+.main_histoire article {
+    background-color: #ece9e9;
+    width: 30%;
+    margin: 2em;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
+.main_histoire article:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05); 
+}
+
+.main_histoire article:nth-child(odd) {
+    margin-right: auto;
+    margin-left: 12em;
+}
+
+.main_histoire article:nth-child(even) {
+    margin-left: auto;
+    margin-right: 12em;
+}
+
+.main_histoire button{
+    position: relative;
+    width: 11em;
+    height: 10em;
+}
+
+.main_histoire button img{
+    width: 100%;
+    height: 50%;
+}
+
+.badge{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+/* page about */
+
+.main_about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.main_about > section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  
 /*Organigramme*/
 #organigramme_main {
     display: flex;
@@ -371,6 +400,3 @@ ol {
     height: 2px;
     background: var(--black);
   }
-  
-  
-  
