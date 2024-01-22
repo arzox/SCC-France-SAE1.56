@@ -251,6 +251,10 @@ button:hover {
     color: var(--black)
 }
 
+.main_about > section > img {
+    size: 10%;
+}
+
 /* page projet */
 
 .main_projet {
