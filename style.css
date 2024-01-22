@@ -266,16 +266,37 @@ button:hover {
 
 
 /* Page Transition Numérique et Ecologique */
+.section_transition_numerique {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+
 
 .main_transition_numerique section > img {
     width: 100vw;
     height: calc(100vh - 3em);
 }
 
+.section_transition_numerique img {
+    width: 100%;
+    height: calc(100vh - 20em);
+}
+
+.section_transition_numerique a > img {
+    width: 150px;
+    height: 150px;
+}
+
+.flex-img-texte {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 /* page about */
-
 .main_about {
     display: flex;
     flex-direction: column;
