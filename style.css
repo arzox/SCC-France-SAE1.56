@@ -584,6 +584,7 @@ li {
 .main_projet article {
     display: flex;
     flex-direction: row;
+    align-items: center;
 
 }
 
