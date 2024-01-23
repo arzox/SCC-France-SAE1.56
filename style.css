@@ -319,7 +319,19 @@ button:hover {
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 5em;
+}
+
+
+.section_transition_numerique h1 {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.section_transition_numerique p {
+    text-align: justify;
+    font-size: 1.3em;
+    margin-top: 10px;
 }
 
 
@@ -330,17 +342,64 @@ button:hover {
 
 .section_transition_numerique img {
     width: 100%;
-    height: calc(100vh - 20em);
+    height: 100vh;
 }
 
 .section_transition_numerique a > img {
-    width: 150px;
-    height: 150px;
+    width: 500px;
+    height: 500px;
 }
 
-.flex-img-texte {
+.container-flex{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.aside-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section_transition_numerique a {
+    align-self: center;
+    padding: 0.5em;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.section_transition_numerique a::before {
+    content: "Visiter le site de Ecovadis";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.section_transition_numerique a:hover::before {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.section_transition_numerique article > aside {
+    height: 110vh;
+}
+.section_transition_numerique article > img{
+    margin-top: 2em;
+    border-radius: 50px;
 }
 
 
