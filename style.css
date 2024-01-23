@@ -344,33 +344,6 @@ button:hover {
 }
 
 
-/* page about */
-.main_about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.main_about > section {
-    width: 80%;
-    height: 10em;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.main_about article {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.main_about > a {
-    text-decoration: none;
-    color: var(--black);
-    font-weight: bold;
-}
 
   
 /*Organigramme*/
@@ -557,39 +530,40 @@ li {
 
 .main_about {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100vh;
 }
 
 
 .main_about > section {
-    width: 80%;
+    width: 50%;
     height: 10em;
     display: flex;
     flex-direction: column;
     text-align: center;
+    flex-grow: 1;
 }
 
-.main_about article {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
 
-.main_about > a {
+.main_about a {
     text-decoration: none;
     color: var(--black);
     font-weight: bold;
+    text-align: center;
+    height: 30vh;
 }
-
-.main_about h1 {
+.speh1 {
     padding: 2em;
+    text-align: center;
 }
 
 .main_about img {
-    width: 20%;
-    height: auto;
+    width: auto;
+    height: 50%;
 }
+
 
 /* page projet */
 
@@ -610,6 +584,8 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 30vh;
+
 }
 
 .main_projet img {
