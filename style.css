@@ -336,6 +336,9 @@ button:hover {
     font-size: 1.5em;
     transform: translateY(-100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .section_transition_numerique a:hover::before {
@@ -552,6 +555,39 @@ li {
     height: 2px;
     background: var(--black);
   }
+
+/* page about */
+
+.main_about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.main_about > section {
+    width: 80%;
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main_about article {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.main_about > a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.main_about h1 {
+    padding: 2em;
+}
 
 .main_about img {
     width: 20%;
