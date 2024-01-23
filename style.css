@@ -344,33 +344,6 @@ button:hover {
 }
 
 
-/* page about */
-.main_about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.main_about > section {
-    width: 80%;
-    height: 10em;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.main_about article {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.main_about > a {
-    text-decoration: none;
-    color: var(--black);
-    font-weight: bold;
-}
 
   
 /*Organigramme*/
@@ -557,39 +530,41 @@ li {
 
 .main_about {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100vh;
 }
 
 
-.main_about > section {
-    width: 80%;
+.main_about a {
+    color: white;
+    width: 10em;
     height: 10em;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
-.main_about article {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.main_about a > img{
+    margin: 0;
+    padding: 0.5em;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
 }
 
-.main_about > a {
-    text-decoration: none;
-    color: var(--black);
-    font-weight: bold;
+.main_about a:hover > img{
+    transform: scale(1.3);
 }
 
-.main_about h1 {
+
+
+.speh1 {
     padding: 2em;
+    text-align: center;
 }
 
-.main_about img {
-    width: 20%;
-    height: auto;
-}
 
 /* page projet */
 
@@ -610,6 +585,8 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 30vh;
+
 }
 
 .main_projet img {
