@@ -375,6 +375,11 @@ button:hover {
     font-weight: bold;
 }
 
+.main_about h1 {
+    padding: 2em;
+}
+
+
   
 /*Organigramme*/
 #organigramme_main {
