@@ -609,16 +609,12 @@ footer article {
     display: flex;
     flex-direction: column;
     width: 40%;
-    position: relative;
-    top: 50%;
-    transform: translateY(6%);
 }
 
 footer a {
     position: relative;
     top: 50%;
     transform: translateY(50%);
-    /* make the container smaller*/
     padding: 2em;
 }
 
