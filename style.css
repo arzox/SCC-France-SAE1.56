@@ -74,6 +74,11 @@ header li {
     transition: transform 0.25s ease-out;
 }
 
+.current.underline-animation::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
 .underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom center;
@@ -576,8 +581,6 @@ li {
 }
 
 
-
-
 /* page projet */
 
 .main_projet h1{
@@ -586,19 +589,22 @@ li {
 
 .main_projet section{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-    flex-wrap: wrap;
-    width: 80%;
+    flex-direction: column;
 }
 
 .main_projet article {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
     height: 30vh;
 
+}
+
+.main_projet article:nth-child(even) {
+    background-color: var(--blue);
+    border: solid 2px var(--black);
+    border-left: none;
+    border-right: none;
 }
 
 .main_projet img {
@@ -610,6 +616,7 @@ li {
 .main_projet p {
     padding: 1em;
     height: auto;
+    width: 70%;
 }
 
 
