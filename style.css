@@ -574,6 +574,24 @@ li {
     background: var(--black);
   }
 
+/* page partenaire */
+
+.main_partenaire article{
+    display: flex;
+    position: relative;
+    height: 20%;
+    gap: 10%;
+    margin: 5%;
+    align-items: center;
+
+}
+
+.main_partenaire article img{
+    height: 70%;
+    
+}
+
+
 /* page about */
 
 .main_about {
