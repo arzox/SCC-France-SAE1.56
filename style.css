@@ -597,7 +597,7 @@ li {
 /* page footer */
 
 footer {
-    background-color: #8dd7cf;
+    background-color: var(--black);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -610,6 +610,7 @@ footer article {
     flex-direction: column;
     width: 40%;
     padding: 2em;
+    color: white;
 }
 
 footer a {
@@ -617,6 +618,7 @@ footer a {
     top: 50%;
     transform: translateY(30%);
     padding: 2em;
+    color: white;
 }
 
 footer img {
