@@ -296,6 +296,19 @@ button:hover {
     outline-offset: -2px;
 }
 
+.rectangle:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s ease;
+    transform-origin: center;
+    outline-color: #ece9e9;
+    cursor: pointer;
+}
+
+.rectangle:hover::before {
+    opacity: 0;
+    transition: 0.1s ease;
+}
+
 ol {
     list-style: none;
 }
