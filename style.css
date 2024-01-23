@@ -273,16 +273,24 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
     margin: auto;
     flex-wrap: wrap;
-}
-
-.main_projet > article {
     width: 80%;
-    height: 10em;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
 }
 
+.main_projet article {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.main_projet img {
+    width: 30%;
+    height: auto;
+    padding: 1em;
+}
+
+.main_projet p {
+    padding: 1em;
+    height: auto;
+}
