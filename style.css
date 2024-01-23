@@ -16,9 +16,14 @@ box-sizing: border-box;
     src: url(assets/index/dosis.ttf);
 }
 
+html {
+    width: 100%;
+}
+
 body {
     margin: 0;
     font-family: dosis;
+    width: 100%;
 }
 
 a {
@@ -53,6 +58,50 @@ header li {
     color: white;
     font-weight: lighter;
     font-size: larger;
+}
+
+/*--------------- MAIN ---------------*/
+
+.textAndImage {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    gap: 3em;
+    height: calc(100vh - 3em);
+}
+
+.textAndImage > img {
+    text-align: center;
+    width: 30%;
+}
+
+.textAndImage >  div {
+    width: 60%;
+    font-size: 40px;
+}
+
+.textAndImage >  div > h1 {
+    color: var(--blue);
+    transform: translateX(-150%);
+}
+
+.textAndImage > div > .loaded {
+    transform: translateX(0px);
+    transition: 1s ease;
+}
+
+.textAndImage >  div > h1:nth-child(1){
+    margin-left: 20%;
+}
+
+.textAndImage >  div > h1:nth-child(2){
+    margin-left: 32%;
+}
+
+.textAndImage >  div > h1:nth-child(3){
+    margin-left: 42%;
 }
 
 .underline-animation {
@@ -312,24 +361,16 @@ button:hover {
 
   
 /*Organigramme*/
-#organigramme_main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2em;
-    gap: 3em;
-    height: calc(100vh - 3em);
-}
 
-#organigramme {
+
+.textAndImage > #organigramme {
     text-align: center;
     width: 60%;
 }
 
-#organigramme_text {
-    width: 40%;
-    font-size: 24px;
+.textAndImage > #organigramme_text {
     text-align: center;
+    width: 40%;
 }
 
 #organigramme_text h2 {
