@@ -24,6 +24,7 @@ body {
     margin: 0;
     font-family: dosis;
     width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -58,6 +59,10 @@ header li {
     color: white;
     font-weight: lighter;
     font-size: larger;
+}
+
+section {
+    position: relative;
 }
 
 /*--------------- MAIN ---------------*/
@@ -104,6 +109,22 @@ header li {
     margin-left: 42%;
 }
 
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10em;
+    text-align: center;
+    top: 1em;
+    font-weight: bold;
+    font-size: 2em;
+    background-color: var(--black);
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    color: white;
+}
+
 .underline-animation {
     display: inline-block;
     position: relative;
@@ -136,7 +157,7 @@ header li {
 
 /* PAGE CONTACT */
 .main-contact {
-    margin: 0 auto;
+    margin: 60px auto;
     width: 30%;
 }
 
@@ -268,22 +289,16 @@ button:hover {
     margin-right: 12em;
 }
 
-
-.sablier,
-.title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .sablier {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     height: 8em;
     width: 8em;
     bottom: 5em;
-    transform: translateX(-50%);
     font-weight: bold;
-    border: 2px solid var(--blue);
-    background-color: var(--blue);
+    background-color: var(--black);
     border-radius: 0.5em;
     transition: background-color 0.5s ease;
     box-shadow: 0 0 20px 0 var(--black);
@@ -295,23 +310,10 @@ button:hover {
 }
 
 .sablier:hover{
-    background-color: transparent;
-    box-shadow: 0 0 10px 0 var(--blue);
+    transform: scale(1.1);
+    border: solid 3px white;
+    transition: transform 0.25s ease;
 }
-
-.title {
-    width: 12em;
-    text-align: center;
-    top: 2em;
-    font-weight: bold;
-    font-size: 3em;
-    background-color: var(--blue);
-    padding: 1em 2em;
-    border-radius: 1em;
-    color: var(--black);
-    box-shadow: 0 0 20px 0 var(--black);
-}
-
 
 
 /* Page Transition Numérique et Ecologique */
