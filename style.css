@@ -1,6 +1,8 @@
 :root {
     --blue: #0297FA;
+    --teal: #02E5FA;
     --black: #1f1e2c;
+    --green: #02FABC;
 }
 
 * {
@@ -49,7 +51,7 @@ header ul {
 header li {
     list-style-type: none;
     color: white;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: larger;
 }
 
@@ -153,12 +155,9 @@ header li {
 }
 
 button {
-    margin: 1em;
-    margin-bottom: 3em;
+    margin: 1em 1em 3em;
     font-weight: bold;
-    padding: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding: 1em 3em;
     border: 2px solid var(--blue);
     background-color: var(--blue);
     border-radius: 0.5em;
@@ -317,8 +316,9 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2em;
+    padding: 2em;
     gap: 3em;
+    height: calc(100vh - 3em);
 }
 
 #organigramme {
@@ -328,12 +328,41 @@ button:hover {
 
 #organigramme_text {
     width: 40%;
+    font-size: 24px;
+    text-align: center;
+}
+
+#organigramme_text h2 {
+    width: 70%;
+    margin: 1em auto;
+}
+
+#organigramme_text p {
+    width: 60%;
+    text-align: justify;
+    color: var(--black);
+    margin: 0 auto;
 }
 
 .rectangle {
     position: relative;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    outline: solid 2px var(--black);
+    outline-offset: -2px;
+}
+
+.rectangle:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s ease;
+    transform-origin: center;
+    outline-color: #ece9e9;
+    cursor: pointer;
+}
+
+.rectangle:hover::before {
+    opacity: 0;
+    transition: 0.1s ease;
 }
 
 ol {
@@ -346,10 +375,10 @@ ol {
 .level-0 {
     width: 50%;
     margin: 0 auto 20px;
-    background: var(--blue);
-  }
+    background-color: var(--blue);
+}
   
-  .level-0::before {
+.level-0::before {
     content: "";
     position: absolute;
     top: 100%;
@@ -357,8 +386,8 @@ ol {
     transform: translateX(-50%);
     width: 2px;
     height: 20px;
-    background: var(--black);
-  }
+    background-color: var(--black);
+}
   
 
 
@@ -368,9 +397,9 @@ ol {
     width: 50%;
     margin: 0 auto 40px;
     background: var(--blue);
-  }
+}
   
-  .level-1::before {
+.level-1::before {
     content: "";
     position: absolute;
     top: 100%;
@@ -379,11 +408,15 @@ ol {
     width: 2px;
     height: 20px;
     background: var(--black);
-  }
+}
   
   
   /* LEVEL-2 STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+li {
+    position: relative;
+}
+
 .level-2-wrapper {
     position: relative;
     display: grid;
@@ -391,19 +424,19 @@ ol {
     grid-column-gap: 20px;
     width: 90%;
     margin: 0 auto;
-  }
+}
   
-  .level-2-wrapper::before {
+.level-2-wrapper::before {
     content: "";
     position: absolute;
     top: -20px;
-    left: calc(25% - 5px);
-    width: calc(50% + 10px);
+    left: calc(12.25% - 5px);
+    width: calc(75.5% + 10px);
     height: 2px;
     background: var(--black);
-  }
+}
   
-  .level-2-wrapper > li::before {
+.level-2-wrapper > li::before {
     content: "";
     position: absolute;
     top: 0;
@@ -412,12 +445,12 @@ ol {
     width: 2px;
     height: 20px;
     background: var(--black);
-  }
+}
   
-  .level-2 {
+.level-2 {
     margin-bottom: 20px;
-    background: var(--level-2);
-  }
+    background: var(--teal);
+}
   
   
 /* LEVEL-3 STYLES
@@ -444,14 +477,14 @@ ol {
   
   .level-3 {
     font-weight: normal;
-    background: var(--level-3);
+    background: var(--green);
   }
   
   .level-3::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: 0%;
+    left: 0;
     transform: translate(-100%, -50%);
     width: 20px;
     height: 2px;
