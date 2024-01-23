@@ -294,3 +294,33 @@ button:hover {
     padding: 1em;
     height: auto;
 }
+
+
+/* page footer */
+
+footer {
+    background-color: #8dd7cf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+}
+
+footer article {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+footer a {
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+    /* make the container smaller*/
+}
+
+footer img {
+    width: 20%;
+    height: 20%;
+}
