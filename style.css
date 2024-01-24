@@ -730,17 +730,40 @@ li {
 
 .main_partenaire article{
     display: flex;
-    position: relative;
-    height: 20%;
-    gap: 10%;
-    margin: 5%;
+    gap: 10em;
+    margin: 5px;
     align-items: center;
-
 }
 
-.main_partenaire article img{
-    height: 70%;
-    
+.main_partenaire article a{
+    width: 80%;
+}
+
+.main_partenaire article a > img{
+    height: 100%;
+    width: 100%;
+    padding: 2em;
+    margin: 2em;
+    transition: transform 0.3s ease;
+}
+
+.main_partenaire article a:hover > img{
+    transform: scale(1.15);
+}
+
+.main_partenaire p{
+    background-color: var(--black);
+    color: white;
+    width: 100%;
+    margin: 2em;
+    padding: 3em;
+    border-radius: 20px;
+    text-align: justify;
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.main_partenaire p:hover {
+    transform: scale(1.05); 
 }
 
 
