@@ -293,7 +293,7 @@ button:hover {
 .main_histoire {
     display: flex;
     flex-direction: column;
-    position: relative; /* Ajout pour positionner le trait par rapport à .main_histoire */
+    position: relative; 
 }
 
 .main_histoire section {
@@ -317,8 +317,7 @@ button:hover {
     border-radius: 20px;
     text-align: justify;
     position: relative;
-    transition: transform 0.5s ease;
-    
+    transition: transform 0.5s ease; 
 }
 
 .sablier {
@@ -352,72 +351,93 @@ button:hover {
     content: "";
     width: 1em;
     height: 100%;
-    background-color: var(--black); /* Couleur du trait */
+    background-color: var(--black);
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1; /* Pour placer le trait derrière les articles */
+    z-index: -1;
 }
 
 .main_histoire article:nth-child(odd) {
     margin-right: auto;
-    margin-left: 12em;
+    margin-left: calc(50% - (30% + 20% / 2));
 }
 
 .main_histoire article:nth-child(even) {
     margin-left: auto;
-    margin-right: 12em;
+    margin-right: calc(50% - (30% + 20% / 2));
 }
 
 /* Ajout de styles pour les articles à gauche */
 .main_histoire article:nth-child(odd)::before {
-    left: 132%; /* Partir de la gauche de l'article pour les articles à gauche */
-    right: auto; /* Réinitialiser la position à droite pour les articles à gauche */
-    transform-origin: left; /* Définir le point de départ à gauche */
-    opacity: 1; /* Opacité par défaut */
+    left: 117%; 
+    right: auto; 
+    transform-origin: left; 
+    opacity: 1; 
 }
 
 .main_histoire article:nth-child(odd):hover::before {
-    transform: translateX(-100%) scaleX(1); /* Barre horizontale visible en permanence pour les articles à gauche */
-    opacity: 0; /* Disparition de l'opacité au survol pour les articles à gauche */
+    transform: translateX(-100%) scaleX(1); 
+    opacity: 0; 
 }
 
 
 .main_histoire article::before {
     content: "";
-    width: 33%; /* Ajustez la largeur de la barre horizontale */
-    height: 0.5em; /* Ajustez l'épaisseur de la barre horizontale */
+    width: calc(30% / 2);
+    left: 2%;
+    transform: translateX(-116%);
+    height: 0.5em;
     border: dotted 4px var(--black);
     border-bottom: none;
     border-right: none;
     border-left: none;
     position: absolute;
-    top: 50%; /* Centré verticalement */
-    left: 1%; /* Partir de la gauche de l'article pour les articles à droite */
-    transform: translateX(-100%) scaleX(1); /* Barre horizontale visible par défaut */
-    transform-origin: right; /* Définir le point de départ à droite */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Animation pour le mouvement et la transparence */
-    z-index: -1; /* Pour placer le trait derrière les articles */
-    opacity: 1; /* Opacité par défaut */
+    top: 50%;
+    transform-origin: right;
+    transition: transform 1.5s ease, opacity 0.5s ease;
+    z-index: -1;
+    opacity: 1;
 }
 
 .main_histoire article:hover::before {
-    transform: translateX(-100%) scaleX(1); /* Barre horizontale visible au survol */
-    opacity: 0; /* Disparition de l'opacité au survol */
+    transform: translateX(-100%) scaleX(1); 
+    opacity: 0; 
+}
+
+.main_histoire article span.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
 }
 
 .main_histoire article:hover .date {
-    opacity: 1; /* Disparition de la date au survol */
+    opacity: 1; 
 }
 
 .main_histoire article .date {
-    opacity: 0; /* Affichage de la date par défaut */
-    transition: opacity 0.5s ease; /* Animation pour l'opacité */
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
 }
 
 .main_histoire article:hover {
     transform: scale(1.05);
+}
+
+@media screen and (max-width: 1475px) {
+    .main_histoire::before {
+        display: none;
+    }
+    
+    .main_histoire article:nth-child(odd)::before {
+        display: none;
+    }
+
+    .main_histoire article:nth-child(even)::before {
+        display: none;
+    }
 }
 
 
@@ -771,12 +791,11 @@ li {
     transform: scale(1.05); 
 }
 
-@media screen and (max-width: 900px) {}
-
-.main_partenaire{
-    font-size:x-small;
+@media screen and (max-width: 900px) {
+    .main_partenaire{
+        font-size:x-small;
+    }
 }
-
 
 /* page about */
 
@@ -852,7 +871,6 @@ li {
     flex-wrap: wrap;
     min-height: 30vh;
     flex-grow: 1;
-
 }
 
 .main_projet article:nth-child(even) {
