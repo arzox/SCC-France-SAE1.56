@@ -293,7 +293,7 @@ button:hover {
 .main_histoire {
     display: flex;
     flex-direction: column;
-    position: relative; /* Ajout pour positionner le trait par rapport à .main_histoire */
+    position: relative; 
 }
 
 .main_histoire section {
@@ -351,12 +351,12 @@ button:hover {
     content: "";
     width: 1em;
     height: 100%;
-    background-color: var(--black); /* Couleur du trait */
+    background-color: var(--black);
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1; /* Pour placer le trait derrière les articles */
+    z-index: -1;
 }
 
 .main_histoire article:nth-child(odd) {
@@ -371,21 +371,21 @@ button:hover {
 
 /* Ajout de styles pour les articles à gauche */
 .main_histoire article:nth-child(odd)::before {
-    left: 118%; /* Partir de la gauche de l'article pour les articles à gauche */
-    right: auto; /* Réinitialiser la position à droite pour les articles à gauche */
-    transform-origin: left; /* Définir le point de départ à gauche */
-    opacity: 1; /* Opacité par défaut */
+    left: 117%; 
+    right: auto; 
+    transform-origin: left; 
+    opacity: 1; 
 }
 
 .main_histoire article:nth-child(odd):hover::before {
-    transform: translateX(-100%) scaleX(1); /* Barre horizontale visible en permanence pour les articles à gauche */
-    opacity: 0; /* Disparition de l'opacité au survol pour les articles à gauche */
+    transform: translateX(-100%) scaleX(1); 
+    opacity: 0; 
 }
 
 
 .main_histoire article::before {
     content: "";
-    width: calc(30% / 2); /* Ajustement pour centrer correctement la barre horizontale */
+    width: calc(30% / 2);
     left: 2%;
     transform: translateX(-116%);
     height: 0.5em;
@@ -396,23 +396,30 @@ button:hover {
     position: absolute;
     top: 50%;
     transform-origin: right;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 1.5s ease, opacity 0.5s ease;
     z-index: -1;
     opacity: 1;
 }
 
 .main_histoire article:hover::before {
-    transform: translateX(-100%) scaleX(1); /* Barre horizontale visible au survol */
-    opacity: 0; /* Disparition de l'opacité au survol */
+    transform: translateX(-100%) scaleX(1); 
+    opacity: 0; 
+}
+
+.main_histoire article span.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
 }
 
 .main_histoire article:hover .date {
-    opacity: 1; /* Disparition de la date au survol */
+    opacity: 1; 
 }
 
 .main_histoire article .date {
-    opacity: 0; /* Affichage de la date par défaut */
-    transition: opacity 0.5s ease; /* Animation pour l'opacité */
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
 }
 
 .main_histoire article:hover {
@@ -424,7 +431,6 @@ button:hover {
         display: none;
     }
     
-    /* Ajout de styles pour les articles à gauche */
     .main_histoire article:nth-child(odd)::before {
         display: none;
     }
