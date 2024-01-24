@@ -293,7 +293,7 @@ button:hover {
 .main_histoire {
     display: flex;
     flex-direction: column;
-    position: relative; /* Ajout pour positionner le trait par rapport à .main_histoire */
+    position: relative; 
 }
 
 .main_histoire section {
@@ -317,8 +317,7 @@ button:hover {
     border-radius: 20px;
     text-align: justify;
     position: relative;
-    transition: transform 0.5s ease;
-    
+    transition: transform 0.5s ease; 
 }
 
 .sablier {
@@ -352,72 +351,93 @@ button:hover {
     content: "";
     width: 1em;
     height: 100%;
-    background-color: var(--black); /* Couleur du trait */
+    background-color: var(--black);
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1; /* Pour placer le trait derrière les articles */
+    z-index: -1;
 }
 
 .main_histoire article:nth-child(odd) {
     margin-right: auto;
-    margin-left: 12em;
+    margin-left: calc(50% - (30% + 20% / 2));
 }
 
 .main_histoire article:nth-child(even) {
     margin-left: auto;
-    margin-right: 12em;
+    margin-right: calc(50% - (30% + 20% / 2));
 }
 
 /* Ajout de styles pour les articles à gauche */
 .main_histoire article:nth-child(odd)::before {
-    left: 132%; /* Partir de la gauche de l'article pour les articles à gauche */
-    right: auto; /* Réinitialiser la position à droite pour les articles à gauche */
-    transform-origin: left; /* Définir le point de départ à gauche */
-    opacity: 1; /* Opacité par défaut */
+    left: 117%; 
+    right: auto; 
+    transform-origin: left; 
+    opacity: 1; 
 }
 
 .main_histoire article:nth-child(odd):hover::before {
-    transform: translateX(-100%) scaleX(1); /* Barre horizontale visible en permanence pour les articles à gauche */
-    opacity: 0; /* Disparition de l'opacité au survol pour les articles à gauche */
+    transform: translateX(-100%) scaleX(1); 
+    opacity: 0; 
 }
 
 
 .main_histoire article::before {
     content: "";
-    width: 33%; /* Ajustez la largeur de la barre horizontale */
-    height: 0.5em; /* Ajustez l'épaisseur de la barre horizontale */
+    width: calc(30% / 2);
+    left: 2%;
+    transform: translateX(-116%);
+    height: 0.5em;
     border: dotted 4px var(--black);
     border-bottom: none;
     border-right: none;
     border-left: none;
     position: absolute;
-    top: 50%; /* Centré verticalement */
-    left: 1%; /* Partir de la gauche de l'article pour les articles à droite */
-    transform: translateX(-100%) scaleX(1); /* Barre horizontale visible par défaut */
-    transform-origin: right; /* Définir le point de départ à droite */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Animation pour le mouvement et la transparence */
-    z-index: -1; /* Pour placer le trait derrière les articles */
-    opacity: 1; /* Opacité par défaut */
+    top: 50%;
+    transform-origin: right;
+    transition: transform 1.5s ease, opacity 0.5s ease;
+    z-index: -1;
+    opacity: 1;
 }
 
 .main_histoire article:hover::before {
-    transform: translateX(-100%) scaleX(1); /* Barre horizontale visible au survol */
-    opacity: 0; /* Disparition de l'opacité au survol */
+    transform: translateX(-100%) scaleX(1); 
+    opacity: 0; 
+}
+
+.main_histoire article span.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
 }
 
 .main_histoire article:hover .date {
-    opacity: 1; /* Disparition de la date au survol */
+    opacity: 1; 
 }
 
 .main_histoire article .date {
-    opacity: 0; /* Affichage de la date par défaut */
-    transition: opacity 0.5s ease; /* Animation pour l'opacité */
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
 }
 
 .main_histoire article:hover {
     transform: scale(1.05);
+}
+
+@media screen and (max-width: 1475px) {
+    .main_histoire::before {
+        display: none;
+    }
+    
+    .main_histoire article:nth-child(odd)::before {
+        display: none;
+    }
+
+    .main_histoire article:nth-child(even)::before {
+        display: none;
+    }
 }
 
 
@@ -427,6 +447,76 @@ button:hover {
     margin: auto;
     display: flex;
     flex-direction: column;
+}
+
+.eco-message {
+    height: 50vh;
+    background-color: var(--green);
+    margin: 10em 12em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2em;
+    border: 2px solid #03a97e;
+}
+
+.eco-message > aside > h1 {
+    text-align: right;
+    font-size: 2.5em;
+    color: white;
+}
+
+.eco-message > aside > p {
+    text-align: right;
+    font-size: 1em;
+    color: var(--black);
+}
+
+.eco-message > img {
+
+}
+
+.eco-message > aside {
+    display: flex;
+    padding: 5em;
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2em;
+}
+
+.ecovadis {
+    position: relative;
+    padding: 5em 2em;
+    background-color: var(--green);
+    margin: 10% 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    border-radius: 2em;
+    border: 2px solid #03a97e;
+    text-align: justify;
+    color: var(--black);
+}
+
+.ecovadis > a {
+    width: 35%;
+    top: 0;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.ecovadis > h1 {
+    margin-top: 5%;
+    color: white;
+}
+
+.ecovadis > a > img {
+    width: 100%;
 }
 
 .image-flex{
@@ -504,6 +594,23 @@ button:hover {
     transform: translateY(0);
 }
 
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-image {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Pour placer l'image en arrière-plan */
+}
 
 
 .main_about h1 {
@@ -764,6 +871,7 @@ li {
     border-radius: 20px;
     text-align: justify;
     transition: box-shadow 0.5s ease, transform 0.5s ease;
+    font-size: 1.7em;
 }
 
 .main_partenaire p:hover {
@@ -771,14 +879,12 @@ li {
 }
 
 @media screen and (max-width: 900px) {
-
-.main_partenaire{
-    font-size:x-small;
+    .main_partenaire{
+        font-size:x-small;
+    }
 }
 
-
 /* page about */
-
 .main_about {
     display: flex;
     justify-content: space-around;
@@ -794,13 +900,13 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 20%; 
+    flex-basis: 20%;
     font-size: 1.2em;
 }
 
 .main_about img {
     width: 150px;
-    height: 150px; 
+    height: 150px;
     display: block;
     margin: 0 auto;
     transition: transform 0.3s ease;
@@ -813,11 +919,11 @@ li {
 }
 
 .main_about a:hover img {
-    transform: scale(1.5); 
+    transform: scale(1.5);
 }
 
 .main_about a:hover span {
-    transform: translateY(15px); 
+    transform: translateY(15px);
 }
 
 
@@ -831,15 +937,12 @@ li {
 }
 
 
-
-
 /* page projet */
-
-.main_projet h1{
+.main_projet h1 {
     text-align: center;
 }
 
-.main_projet section{
+.main_projet section {
     display: flex;
     flex-direction: column;
 }
@@ -851,7 +954,6 @@ li {
     flex-wrap: wrap;
     min-height: 30vh;
     flex-grow: 1;
-
 }
 
 .main_projet article:nth-child(even) {
@@ -875,12 +977,11 @@ li {
 
 
 /* footer */
-
 footer {
     background-color: var(--black);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
     position: relative;
     align-items: center;
@@ -891,7 +992,13 @@ footer section {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+}
 
+footer .footer_sec2{
+    text-align: center;
+    width: 30vw;
+    padding: 1em;
+    align-self: left;
 }
 
 footer article {
@@ -900,7 +1007,7 @@ footer article {
     width: 40%;
     padding: 2em;
     color: white;
-    align-self: left;
+    align-self: self-start;
 }
 
 footer img {
@@ -918,15 +1025,15 @@ footer a {
     text-align: center;
 }
 
-footer a > img{
+footer a > img {
     margin: 0;
-    padding: 0.5em;
+    padding: 0;
     width: 80px;
     height: 80px;
     transition: transform 0.3s ease;
 }
 
-footer a:hover > img{
+footer a:hover > img {
     transform: scale(1.3);
 }
 
