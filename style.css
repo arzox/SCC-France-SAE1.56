@@ -691,6 +691,12 @@ li {
     text-align: center;
 }
 
+.about_us {
+    padding: 2em;
+}
+
+
+
 
 /* page projet */
 
@@ -743,24 +749,33 @@ footer {
     align-items: center;
 }
 
+footer section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
 footer article {
     display: flex;
     flex-direction: column;
     width: 40%;
     padding: 2em;
     color: white;
+    align-self: left;
 }
 
 footer img {
     width: 9%;
     height: 9%;
+    align-self: left;
 }
 
 footer a {
     color: white;
     width: 5em;
     height: 5em;
-    margin: 0;
+    margin: 2em;
     padding: 0;
     text-align: center;
 }
@@ -768,11 +783,16 @@ footer a {
 footer a > img{
     margin: 0;
     padding: 0.5em;
-    width: 100%;
-    height: 100%;
+    width: 80px;
+    height: 80px;
     transition: transform 0.3s ease;
 }
 
 footer a:hover > img{
     transform: scale(1.3);
+}
+
+.logo_footer {
+    width: 200px;
+    height: 150px;
 }

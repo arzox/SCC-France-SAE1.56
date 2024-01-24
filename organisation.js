@@ -4,7 +4,7 @@ const textDictionnary = {
     france: "Elle est actuellement supportaire des JO de Paris 2024. SCC France est le fournisseur de nombreuses grandes entreprises françaises tel que THALES, RICHARDSON, STELLANTIS",
     finances: "Outre la gestion monétaire, cette branche investi dans des entreprises informatique innovantes comme Nimble permettant d'aquérir de l'argent et des contrats",
     specialistcomputercentres: "Abrévié SCC, elle est une ESN (Entreprise de Service Numérique), comme son nom l'indique son activité se dirige vers tous types de services en lien" +
-        " avec le numérique. C’est aussi ce qu’on appelle une société non financière, cela signifie qu’elle propose des biens et services marchands." + "<br>" +
+        " avec le numérique. C'est aussi ce qu'on appelle une société non financière, cela signifie qu'elle propose des biens et services marchands." + "<br>" +
         "En tant que grossiste, SCC achète en gros des stocks de matériel pour proposer ses services en masse à d'autres entreprises clientes.",
     jamesrigbyceo: "James Rigby est le PDG de SCC, il a fondé l'entreprise en 1975. Il est aussi le fondateur de la fondation Rigby Group qui est une société diversifié. " + "<br>" +
         "Les domaines d'activité comprennent la technologie de l'information, l'aviation, l'immobilier, l'hôtellerie, le sport et les loisirs. Cette société possède SCC, " +
