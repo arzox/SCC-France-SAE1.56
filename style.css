@@ -728,6 +728,10 @@ li {
 
 /* page partenaire */
 
+.main_partenaire .title{
+    position: relative;
+}
+
 .main_partenaire article{
     display: flex;
     gap: 10em;
@@ -764,6 +768,12 @@ li {
 
 .main_partenaire p:hover {
     transform: scale(1.05); 
+}
+
+@media screen and (max-width: 900px) {
+
+.main_partenaire{
+    font-size:x-small;
 }
 
 
