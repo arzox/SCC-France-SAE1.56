@@ -456,7 +456,7 @@ button:hover {
 
 .textAndImage > #organigramme {
     text-align: center;
-    width: 60%;
+    width: 55%;
     box-sizing: inherit;
 }
 
@@ -479,7 +479,7 @@ button:hover {
 
 .rectangle {
     position: relative;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     outline: solid 2px var(--black);
     outline-offset: -2px;
@@ -588,13 +588,13 @@ li {
   
 /* LEVEL-3 STYLES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .level-3-wrapper {
+.level-3-wrapper {
     position: relative;
     width: 80%;
     margin-left: auto;
-  }
+}
   
-  .level-3-wrapper::before {
+.level-3-wrapper::before {
     content: "";
     position: absolute;
     top: -20px;
@@ -602,18 +602,18 @@ li {
     width: 2px;
     height: calc(100% + 20px);
     background: var(--black);
-  }
+}
   
-  .level-3-wrapper li + li {
+.level-3-wrapper li + li {
     margin-top: 20px;
-  }
+}
   
-  .level-3 {
+.level-3 {
     font-weight: normal;
     background: var(--green);
-  }
+}
   
-  .level-3::before {
+.level-3::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -622,6 +622,47 @@ li {
     width: 20px;
     height: 2px;
     background: var(--black);
+}
+
+@media screen and (max-width: 1100px) {
+    .rectangle {
+      padding: 20px 10px;
+    }
+  
+    .level-1,
+    .level-2 {
+      width: 100%;
+    }
+  
+    .level-1 {
+      margin-bottom: 20px;
+    }
+  
+    .level-1::before,
+    .level-2-wrapper > li::before {
+      display: none;
+    }
+    
+    .level-2-wrapper,
+    .level-2-wrapper::after,
+    .level-2::after {
+      display: block;
+    }
+  
+    .level-2-wrapper {
+      width: 90%;
+      margin-left: 10%;
+    }
+  
+    .level-2-wrapper::before {
+      left: -20px;
+      width: 2px;
+      height: calc(100% + 40px);
+    }
+  
+    .level-2-wrapper > li:not(:first-child) {
+      margin-top: 50px;
+    }
   }
 
 /* page partenaire */
