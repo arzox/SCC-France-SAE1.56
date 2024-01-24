@@ -1,6 +1,6 @@
 function isElementAtBottom(element) {
     var elementRect = element.getBoundingClientRect();
-    return elementRect.bottom <= window.innerHeight;
+    return elementRect.bottom - elementRect.height /2 <= window.innerHeight;
   }
 
   function handleScroll() {
