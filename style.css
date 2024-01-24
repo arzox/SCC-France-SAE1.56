@@ -724,7 +724,9 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30vh;
+    flex-wrap: wrap;
+    min-height: 30vh;
+    flex-grow: 1;
 }
 
 .main_projet article:nth-child(even) {
@@ -735,8 +737,8 @@ li {
 }
 
 .main_projet img {
-    width: 35vh;
-    width: 30vh;
+    width: 250px;
+    height: 200px;
     padding: 1em;
 }
 
@@ -763,6 +765,7 @@ footer section {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
 
 }
 
@@ -776,8 +779,8 @@ footer article {
 }
 
 footer img {
-    width: 9%;
-    height: 9%;
+    width: 150px;
+    height: 120px;
     align-self: left;
 }
 
