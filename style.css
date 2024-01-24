@@ -770,7 +770,7 @@ li {
     transform: scale(1.05); 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {}
 
 .main_partenaire{
     font-size:x-small;
