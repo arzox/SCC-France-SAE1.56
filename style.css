@@ -38,7 +38,7 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 3em;
+    height: 4em;
 }
 
 header img {
@@ -58,7 +58,7 @@ header li {
     list-style-type: none;
     color: white;
     font-weight: lighter;
-    font-size: larger;
+    font-size: 24px;
 }
 
 section {
@@ -72,41 +72,9 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2em;
+    padding: 6em;
     gap: 3em;
     height: calc(100vh - 3em);
-}
-
-.textAndImage > img {
-    text-align: center;
-    width: 30%;
-}
-
-.textAndImage >  div {
-    width: 60%;
-    font-size: 40px;
-}
-
-.textAndImage >  div > h1 {
-    color: var(--blue);
-    transform: translateX(-150%);
-}
-
-.textAndImage > div > .loaded {
-    transform: translateX(0px);
-    transition: 1s ease;
-}
-
-.textAndImage >  div > h1:nth-child(1){
-    margin-left: 20%;
-}
-
-.textAndImage >  div > h1:nth-child(2){
-    margin-left: 32%;
-}
-
-.textAndImage >  div > h1:nth-child(3){
-    margin-left: 42%;
 }
 
 .title {
@@ -154,8 +122,72 @@ section {
     transform-origin: bottom center;
 }
 
+/*--------------- INDEX ---------------*/
 
-/* PAGE CONTACT */
+.textAndImage > img {
+    text-align: center;
+    width: 30%;
+}
+
+.textAndImage >  div {
+    width: 60%;
+    font-size: 40px;
+}
+
+.textAndImage >  p {
+    width: 50%;
+    font-size: 35px;
+    text-align: justify;
+    color: white;
+}
+
+.textAndImage >  div > h1 {
+    color: var(--blue);
+    transform: translateX(-150%);
+}
+
+.textAndImage > div > .loaded {
+    transform: translateX(0px);
+    transition: 1s ease;
+}
+
+.textAndImage >  div > h1:nth-child(1){
+    margin-left: 20%;
+}
+
+.textAndImage >  div > h1:nth-child(2){
+    margin-left: 32%;
+}
+
+.textAndImage >  div > h1:nth-child(3){
+    margin-left: 42%;
+}
+
+.presentation-text {
+    font-size: 48px;
+    padding: 15vh 10%;
+    text-align: justify;
+}
+
+.web-pages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20vh 0;
+}
+
+.web-pages > a {
+    font-weight: bold;
+    font-size: 5em;
+    text-transform: uppercase;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*--------------- PAGE CONTACT ---------------*/
 .main-contact {
     margin: 60px auto;
     width: 30%;
