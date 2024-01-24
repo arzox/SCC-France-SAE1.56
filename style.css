@@ -464,7 +464,6 @@ button:hover {
 }
 
 .eco-message {
-    height: 50vh;
     background-color: var(--green);
     margin: 10em 12em;
     display: flex;
@@ -472,6 +471,7 @@ button:hover {
     justify-content: space-around;
     border-radius: 2em;
     border: 2px solid #03a97e;
+    flex-wrap: wrap;
 }
 
 .eco-message.to-load {
@@ -503,11 +503,17 @@ button:hover {
     gap: 2em;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 10% 0;
+}
+
 .ecovadis {
     position: relative;
     padding: 5em 2em;
+    width: 22em;
     background-color: var(--green);
-    margin: 10% 38%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -892,7 +898,7 @@ li {
     border-radius: 20px;
     text-align: justify;
     transition: box-shadow 0.5s ease, transform 0.5s ease;
-    font-size: 1.7em;
+    font-size: 1.3em;
 }
 
 .main_partenaire p:hover {
@@ -900,10 +906,11 @@ li {
 }
 
 
-@media screen and (max-width: 900px) {}
+@media screen and (max-width: 900px) {
 
-.main_partenaire{
-    font-size:x-small;
+    .main_partenaire {
+        font-size: x-small;
+    }
 }
 
 /* page about */
