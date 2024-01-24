@@ -177,7 +177,8 @@ section {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20vh 0;
+    margin: 5vh 0 20vh 0;
+    gap: 1em;
 }
 
 .web-pages.to-load {
