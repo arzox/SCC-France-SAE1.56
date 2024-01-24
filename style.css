@@ -473,9 +473,6 @@ button:hover {
     color: var(--black);
 }
 
-.eco-message > img {
-
-}
 
 .eco-message > aside {
     display: flex;
@@ -879,10 +876,11 @@ li {
     transform: scale(1.05); 
 }
 
-@media screen and (max-width: 900px) {
-    .main_partenaire{
-        font-size:x-small;
-    }
+
+@media screen and (max-width: 900px) {}
+
+.main_partenaire{
+    font-size:x-small;
 }
 
 /* page about */
@@ -983,8 +981,6 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: auto;
-    position: relative;
     align-items: center;
 }
 
@@ -997,9 +993,9 @@ footer section {
 
 footer .footer_sec2{
     text-align: center;
-    width: 30vw;
+    width: 35vw;
     padding: 1em;
-    align-self: left;
+    justify-content: flex-end;
 }
 
 footer article {
@@ -1008,7 +1004,6 @@ footer article {
     width: 40%;
     padding: 2em;
     color: white;
-    align-self: self-start;
 }
 
 footer img {
@@ -1035,7 +1030,7 @@ footer a > img {
 }
 
 footer a:hover > img {
-    transform: scale(1.3);
+    transform: scale(1.15);
 }
 
 .logo_footer {
