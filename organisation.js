@@ -11,10 +11,10 @@ const textDictionnary = {
         "source principale de revenus de la fondation.",
     marketing: "Afin d'attirer de nombreux clients les services et produits de SCC sont diversifiés. Couplé à leurs innovations technologiques, SCC est un acteur majeur du marché." +
         "SCC établit des partenariats stratégiques avec des fournisseurs technologiques majeurs. Ces partenariats sont souvent mis en avant comme pour les JO de Paris 2024 mis en avant sur le site de SCC.",
-    services: "J'ai la flemme de faire ce paragraphe",
-    operations: "J'ai la flemme de faire ce paragraphe",
-    royaumeunis: "J'ai la flemme de faire ce paragraphe",
-    roumanie: "J'ai la flemme de faire ce paragraphe",
+    operations: "SCC a de nombreuses opérations, telles que le SOC (Security Operations Center), qui est un dispositif technologique et humain destiné à couvrir un plan d'action permanent global pour un ou plusieurs systèmes d'information (SI).",
+    services: "Leurs services sont la vente de services informatiques offrant une gamme complète de solutions, y compris le conseil en informatique, la fourniture de matériel, des services d'infrastructure, de cloud computing, de gestion, et de sécurité informatique.",
+    royaumeunis: "C'est la branche principale de SCC, elle est la plus développé et la plus ancienne. Elle est aussi la plus importante en terme de revenus. ",
+    roumanie: "SCC Services Roumanie est leader de l'industrie IT à Iași depuis 2006 et offre des services informatiques complets pour les environnements de travail hybrides, avec plus de 1100 experts en IT."
 }
 
     document.addEventListener("DOMContentLoaded", function() {
