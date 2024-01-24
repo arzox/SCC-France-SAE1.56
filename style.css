@@ -689,8 +689,8 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30vh;
-
+    height: auto;
+    flex-wrap: wrap;
 }
 
 .main_projet article:nth-child(even) {
@@ -701,8 +701,8 @@ li {
 }
 
 .main_projet img {
-    width: 35vh;
-    width: 30vh;
+    width: 310px;
+    height: 205px;
     padding: 1em;
 }
 
