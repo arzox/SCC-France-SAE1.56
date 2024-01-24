@@ -964,13 +964,17 @@ li {
 .main_projet img {
     width: 250px;
     height: 200px;
-    padding: 1em;
+    margin: 1em;
+    border-radius: 35px;
+    border: 3px solid var(--black);
 }
 
 .main_projet p {
     padding: 1em;
     height: auto;
     width: 70%;
+    text-align: justify;
+    font-size: 1.3em;
 }
 
 
