@@ -1,9 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var elements = document.querySelectorAll('.to-load');
-    var i = 0;
-    while (i < elements.length) {
-        var element = elements[i];
+function isElementAtBottom(element) {
+    var elementRect = element.getBoundingClientRect();
+    return elementRect.bottom <= window.innerHeight;
+  }
+
+  function handleScroll() {
+    var animatedElements = document.querySelectorAll('.to-load');
+
+    animatedElements.forEach(function(element) {
+      if (isElementAtBottom(element)) {
         element.classList.add('loaded');
-        i++;
-    }
-});
+        element.classList.remove("to-load")
+      }
+    });
+  }
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);

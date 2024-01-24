@@ -8,7 +8,6 @@
 * {
 padding: 0;
 margin: 0;
-box-sizing: border-box;
 }
 
 @font-face {
@@ -74,7 +73,6 @@ section {
     align-items: center;
     padding: 6em;
     gap: 3em;
-    height: calc(100vh - 3em);
 }
 
 .title {
@@ -91,6 +89,12 @@ section {
     margin-bottom: 1em;
     border-radius: 1em;
     color: white;
+}
+
+.loaded {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: 1s ease;
 }
 
 .underline-animation {
@@ -135,6 +139,7 @@ section {
 }
 
 .textAndImage >  p {
+
     width: 50%;
     font-size: 35px;
     text-align: justify;
@@ -143,12 +148,10 @@ section {
 
 .textAndImage >  div > h1 {
     color: var(--blue);
-    transform: translateX(-150%);
 }
 
-.textAndImage > div > .loaded {
-    transform: translateX(0px);
-    transition: 1s ease;
+.textAndImage >  div > h1.to-load {
+    transform: translateX(-150%);
 }
 
 .textAndImage >  div > h1:nth-child(1){
@@ -177,9 +180,18 @@ section {
     margin: 20vh 0;
 }
 
+.web-pages.to-load {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.web-pages > .underline-animation::after {
+    background-color: var(--black);
+}
+
 .web-pages > a {
     font-weight: bold;
-    font-size: 5em;
+    font-size: 4em;
     text-transform: uppercase;
     background-size: cover;
     background-position: center;
@@ -305,8 +317,7 @@ button:hover {
     border-radius: 20px;
     text-align: justify;
     position: relative;
-    transition: transform 0.5s ease;
-    
+    transition: transform 0.5s ease; 
 }
 
 .sablier {
@@ -350,17 +361,17 @@ button:hover {
 
 .main_histoire article:nth-child(odd) {
     margin-right: auto;
-    margin-left: 12em;
+    margin-left: calc(50% - (30% + 20% / 2));
 }
 
 .main_histoire article:nth-child(even) {
     margin-left: auto;
-    margin-right: 12em;
+    margin-right: calc(50% - (30% + 20% / 2));
 }
 
 /* Ajout de styles pour les articles à gauche */
 .main_histoire article:nth-child(odd)::before {
-    left: 132%; /* Partir de la gauche de l'article pour les articles à gauche */
+    left: 118%; /* Partir de la gauche de l'article pour les articles à gauche */
     right: auto; /* Réinitialiser la position à droite pour les articles à gauche */
     transform-origin: left; /* Définir le point de départ à gauche */
     opacity: 1; /* Opacité par défaut */
@@ -374,20 +385,20 @@ button:hover {
 
 .main_histoire article::before {
     content: "";
-    width: 33%; /* Ajustez la largeur de la barre horizontale */
-    height: 0.5em; /* Ajustez l'épaisseur de la barre horizontale */
+    width: calc(30% / 2); /* Ajustement pour centrer correctement la barre horizontale */
+    left: 2%;
+    transform: translateX(-116%);
+    height: 0.5em;
     border: dotted 4px var(--black);
     border-bottom: none;
     border-right: none;
     border-left: none;
     position: absolute;
-    top: 50%; /* Centré verticalement */
-    left: 1%; /* Partir de la gauche de l'article pour les articles à droite */
-    transform: translateX(-100%) scaleX(1); /* Barre horizontale visible par défaut */
-    transform-origin: right; /* Définir le point de départ à droite */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Animation pour le mouvement et la transparence */
-    z-index: -1; /* Pour placer le trait derrière les articles */
-    opacity: 1; /* Opacité par défaut */
+    top: 50%;
+    transform-origin: right;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    z-index: -1;
+    opacity: 1;
 }
 
 .main_histoire article:hover::before {
@@ -406,6 +417,21 @@ button:hover {
 
 .main_histoire article:hover {
     transform: scale(1.05);
+}
+
+@media screen and (max-width: 1475px) {
+    .main_histoire::before {
+        display: none;
+    }
+    
+    /* Ajout de styles pour les articles à gauche */
+    .main_histoire article:nth-child(odd)::before {
+        display: none;
+    }
+
+    .main_histoire article:nth-child(even)::before {
+        display: none;
+    }
 }
 
 
@@ -505,7 +531,8 @@ button:hover {
 
 .textAndImage > #organigramme {
     text-align: center;
-    width: 60%;
+    width: 55%;
+    box-sizing: inherit;
 }
 
 .textAndImage > #organigramme_text {
@@ -527,7 +554,7 @@ button:hover {
 
 .rectangle {
     position: relative;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     outline: solid 2px var(--black);
     outline-offset: -2px;
@@ -636,13 +663,13 @@ li {
   
 /* LEVEL-3 STYLES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .level-3-wrapper {
+.level-3-wrapper {
     position: relative;
     width: 80%;
     margin-left: auto;
-  }
+}
   
-  .level-3-wrapper::before {
+.level-3-wrapper::before {
     content: "";
     position: absolute;
     top: -20px;
@@ -650,18 +677,18 @@ li {
     width: 2px;
     height: calc(100% + 20px);
     background: var(--black);
-  }
+}
   
-  .level-3-wrapper li + li {
+.level-3-wrapper li + li {
     margin-top: 20px;
-  }
+}
   
-  .level-3 {
+.level-3 {
     font-weight: normal;
     background: var(--green);
-  }
+}
   
-  .level-3::before {
+.level-3::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -670,9 +697,55 @@ li {
     width: 20px;
     height: 2px;
     background: var(--black);
+}
+
+@media screen and (max-width: 1100px) {
+    .rectangle {
+      padding: 20px 10px;
+    }
+  
+    .level-1,
+    .level-2 {
+      width: 100%;
+    }
+  
+    .level-1 {
+      margin-bottom: 20px;
+    }
+  
+    .level-1::before,
+    .level-2-wrapper > li::before {
+      display: none;
+    }
+    
+    .level-2-wrapper,
+    .level-2-wrapper::after,
+    .level-2::after {
+      display: block;
+    }
+  
+    .level-2-wrapper {
+      width: 90%;
+      margin-left: 10%;
+    }
+  
+    .level-2-wrapper::before {
+      left: -20px;
+      width: 2px;
+      height: calc(100% + 40px);
+    }
+  
+    .level-2-wrapper > li:not(:first-child) {
+      margin-top: 50px;
+    }
   }
 
 /* page partenaire */
+
+.main_partenaire .title{
+    position: relative;
+}
+
 .main_partenaire article{
     display: flex;
     gap: 10em;
@@ -711,6 +784,11 @@ li {
     transform: scale(1.05); 
 }
 
+@media screen and (max-width: 900px) {
+    .main_partenaire{
+        font-size:x-small;
+    }
+}
 
 /* page about */
 
@@ -761,6 +839,12 @@ li {
     text-align: center;
 }
 
+.about_us {
+    padding: 2em;
+}
+
+
+
 
 /* page projet */
 
@@ -773,13 +857,12 @@ li {
     flex-direction: column;
 }
 
-
-
 .main_projet article {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 30vh;
+
 }
 
 .main_projet article:nth-child(even) {
@@ -814,24 +897,33 @@ footer {
     align-items: center;
 }
 
+footer section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
 footer article {
     display: flex;
     flex-direction: column;
     width: 40%;
     padding: 2em;
     color: white;
+    align-self: left;
 }
 
 footer img {
     width: 9%;
     height: 9%;
+    align-self: left;
 }
 
 footer a {
     color: white;
     width: 5em;
     height: 5em;
-    margin: 0;
+    margin: 2em;
     padding: 0;
     text-align: center;
 }
@@ -839,11 +931,16 @@ footer a {
 footer a > img{
     margin: 0;
     padding: 0.5em;
-    width: 100%;
-    height: 100%;
+    width: 80px;
+    height: 80px;
     transition: transform 0.3s ease;
 }
 
 footer a:hover > img{
     transform: scale(1.3);
+}
+
+.logo_footer {
+    width: 200px;
+    height: 150px;
 }
