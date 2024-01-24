@@ -764,6 +764,7 @@ li {
     border-radius: 20px;
     text-align: justify;
     transition: box-shadow 0.5s ease, transform 0.5s ease;
+    font-size: 1.7em;
 }
 
 .main_partenaire p:hover {
