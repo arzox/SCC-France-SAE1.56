@@ -896,9 +896,9 @@ footer section {
 
 footer .footer_sec2{
     text-align: center;
-    width: 20vw;
+    width: 30vw;
     padding: 1em;
-
+    align-self: left;
 }
 
 footer article {
