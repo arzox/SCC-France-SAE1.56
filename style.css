@@ -177,7 +177,8 @@ section {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20vh 0;
+    margin: 5vh 0 20vh 0;
+    gap: 1em;
 }
 
 .web-pages.to-load {
@@ -301,11 +302,14 @@ button:hover {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 100vw;
+    height: calc(100vh - 3em);
 }
 
 .main_histoire section > img {
-    width: 100vw;
-    height: calc(100vh - 3em);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .main_histoire article {
@@ -449,6 +453,73 @@ button:hover {
     flex-direction: column;
 }
 
+.eco-message {
+    height: 50vh;
+    background-color: var(--green);
+    margin: 10em 12em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2em;
+    border: 2px solid #03a97e;
+}
+
+.eco-message > aside > h1 {
+    text-align: right;
+    font-size: 2.5em;
+    color: white;
+}
+
+.eco-message > aside > p {
+    text-align: right;
+    font-size: 1em;
+    color: var(--black);
+}
+
+
+.eco-message > aside {
+    display: flex;
+    padding: 5em;
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2em;
+}
+
+.ecovadis {
+    position: relative;
+    padding: 5em 2em;
+    background-color: var(--green);
+    margin: 10% 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    border-radius: 2em;
+    border: 2px solid #03a97e;
+    text-align: justify;
+    color: var(--black);
+}
+
+.ecovadis > a {
+    width: 35%;
+    top: 0;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.ecovadis > h1 {
+    margin-top: 5%;
+    color: white;
+}
+
+.ecovadis > a > img {
+    width: 100%;
+}
+
 .image-flex{
     display: flex;
     flex-direction: column;
@@ -524,6 +595,23 @@ button:hover {
     transform: translateY(0);
 }
 
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-image {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Pour placer l'image en arrière-plan */
+}
 
 
 .main_about h1 {
@@ -791,14 +879,14 @@ li {
     transform: scale(1.05); 
 }
 
-@media screen and (max-width: 900px) {
-    .main_partenaire{
-        font-size:x-small;
-    }
+
+@media screen and (max-width: 900px) {}
+
+.main_partenaire{
+    font-size:x-small;
 }
 
 /* page about */
-
 .main_about {
     display: flex;
     justify-content: space-around;
@@ -814,13 +902,13 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 20%; 
+    flex-basis: 20%;
     font-size: 1.2em;
 }
 
 .main_about img {
     width: 150px;
-    height: 150px; 
+    height: 150px;
     display: block;
     margin: 0 auto;
     transition: transform 0.3s ease;
@@ -833,11 +921,11 @@ li {
 }
 
 .main_about a:hover img {
-    transform: scale(1.5); 
+    transform: scale(1.5);
 }
 
 .main_about a:hover span {
-    transform: translateY(15px); 
+    transform: translateY(15px);
 }
 
 
@@ -851,15 +939,12 @@ li {
 }
 
 
-
-
 /* page projet */
-
-.main_projet h1{
+.main_projet h1 {
     text-align: center;
 }
 
-.main_projet section{
+.main_projet section {
     display: flex;
     flex-direction: column;
 }
@@ -894,14 +979,11 @@ li {
 
 
 /* footer */
-
 footer {
     background-color: var(--black);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: auto;
-    position: relative;
     align-items: center;
 }
 
@@ -914,9 +996,9 @@ footer section {
 
 footer .footer_sec2{
     text-align: center;
-    width: 20vw;
+    width: 35vw;
     padding: 1em;
-
+    justify-content: flex-end;
 }
 
 footer article {
@@ -925,7 +1007,6 @@ footer article {
     width: 40%;
     padding: 2em;
     color: white;
-    align-self: left;
 }
 
 footer img {
@@ -943,7 +1024,7 @@ footer a {
     text-align: center;
 }
 
-footer a > img{
+footer a > img {
     margin: 0;
     padding: 0;
     width: 80px;
@@ -951,8 +1032,8 @@ footer a > img{
     transition: transform 0.3s ease;
 }
 
-footer a:hover > img{
-    transform: scale(1.3);
+footer a:hover > img {
+    transform: scale(1.15);
 }
 
 .logo_footer {
