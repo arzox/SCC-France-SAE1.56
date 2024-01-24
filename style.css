@@ -304,6 +304,16 @@ button:hover {
     position: relative;
 }
 
+.main_histoire > article:nth-child(even).to-load {
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+.main_histoire > article:nth-child(odd).to-load {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
 .main_histoire section > img {
     width: 100vw;
     height: calc(100vh - 3em);
@@ -461,6 +471,11 @@ button:hover {
     border: 2px solid #03a97e;
 }
 
+.eco-message.to-load {
+    transform: translateY(-200px);
+    opacity: 0;
+}
+
 .eco-message > aside > h1 {
     text-align: right;
     font-size: 2.5em;
@@ -499,6 +514,11 @@ button:hover {
     border: 2px solid #03a97e;
     text-align: justify;
     color: var(--black);
+}
+
+.ecovadis.to-load {
+    transform: translateX(-200px);
+    opacity: 0;
 }
 
 .ecovadis > a {
