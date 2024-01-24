@@ -8,7 +8,6 @@
 * {
 padding: 0;
 margin: 0;
-box-sizing: border-box;
 }
 
 @font-face {
@@ -74,7 +73,6 @@ section {
     align-items: center;
     padding: 6em;
     gap: 3em;
-    height: calc(100vh - 3em);
 }
 
 .title {
@@ -91,6 +89,12 @@ section {
     margin-bottom: 1em;
     border-radius: 1em;
     color: white;
+}
+
+.loaded {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: 1s ease;
 }
 
 .underline-animation {
@@ -135,6 +139,7 @@ section {
 }
 
 .textAndImage >  p {
+
     width: 50%;
     font-size: 35px;
     text-align: justify;
@@ -143,12 +148,10 @@ section {
 
 .textAndImage >  div > h1 {
     color: var(--blue);
-    transform: translateX(-150%);
 }
 
-.textAndImage > div > .loaded {
-    transform: translateX(0px);
-    transition: 1s ease;
+.textAndImage >  div > h1.to-load {
+    transform: translateX(-150%);
 }
 
 .textAndImage >  div > h1:nth-child(1){
@@ -177,9 +180,18 @@ section {
     margin: 20vh 0;
 }
 
+.web-pages.to-load {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.web-pages > .underline-animation::after {
+    background-color: var(--black);
+}
+
 .web-pages > a {
     font-weight: bold;
-    font-size: 5em;
+    font-size: 4em;
     text-transform: uppercase;
     background-size: cover;
     background-position: center;
@@ -445,6 +457,7 @@ button:hover {
 .textAndImage > #organigramme {
     text-align: center;
     width: 60%;
+    box-sizing: inherit;
 }
 
 .textAndImage > #organigramme_text {
@@ -612,42 +625,20 @@ li {
   }
 
 /* page partenaire */
+
 .main_partenaire article{
     display: flex;
-    gap: 10em;
-    margin: 5px;
+    position: relative;
+    height: 20%;
+    gap: 10%;
+    margin: 5%;
     align-items: center;
+
 }
 
-.main_partenaire article a{
-    width: 80%;
-}
-
-.main_partenaire article a > img{
-    height: 100%;
-    width: 100%;
-    padding: 2em;
-    margin: 2em;
-    transition: transform 0.3s ease;
-}
-
-.main_partenaire article a:hover > img{
-    transform: scale(1.15);
-}
-
-.main_partenaire p{
-    background-color: var(--black);
-    color: white;
-    width: 100%;
-    margin: 2em;
-    padding: 3em;
-    border-radius: 20px;
-    text-align: justify;
-    transition: box-shadow 0.5s ease, transform 0.5s ease;
-}
-
-.main_partenaire p:hover {
-    transform: scale(1.05); 
+.main_partenaire article img{
+    height: 70%;
+    
 }
 
 
@@ -662,7 +653,7 @@ li {
 
 .main_about a {
     text-align: center;
-    margin: 5em;
+    margin: 7em;
     text-decoration: none;
     color: black;
     display: flex;
@@ -673,8 +664,8 @@ li {
 }
 
 .main_about img {
-    width: 150px;
-    height: 150px; 
+    width: 100px;
+    height: 100px; 
     display: block;
     margin: 0 auto;
     transition: transform 0.3s ease;
@@ -712,13 +703,12 @@ li {
     flex-direction: column;
 }
 
-
-
 .main_projet article {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 30vh;
+
 }
 
 .main_projet article:nth-child(even) {
